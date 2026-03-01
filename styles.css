@@ -18,7 +18,6 @@
    15. Media Queries (responsive)
 ================================================================ */
 
-
 /* ================================================================
    1. VARIABLES / TOKENS DE DISEÑO
    Define las paletas de colores según el tema activo.
@@ -31,34 +30,50 @@
    Fondo: #0d0d12, Acento cyan: #00ffcc, Gris texto: #9ca3af */
 :root,
 [data-theme="dark"] {
-  --bg-primary:   #0B0F14;
+  --bg-primary: #0b0f14;
   --bg-secondary: #13131a;
-  --bg-card:      #1a1a24;
-  --bg-card-hover:#1f1f2e;
+  --bg-card: #1a1a24;
+  --bg-card-hover: #1f1f2e;
 
-  --accent:       #3DF2E0;
-  --accent-dim:   #3DF2E020;
+  --accent: #3df2e0;
+  --accent-dim: #3df2e020;
   --accent-hover: #2dd4c0;
 
-  --text-primary:   #BFBFBF;
-  --text-secondary: #BFBFBF;
-  --text-muted:     #5a6070;
+  --text-primary: #bfbfbf;
+  --text-secondary: #bfbfbf;
+  --text-muted: #5a6070;
 
-  --border:       #ffffff12;
-  --border-accent:#3DF2E040;
+  --border: #ffffff12;
+  --border-accent: #3df2e040;
 
-  --nav-bg:       rgba(11,15,20,0.92);
-  --nav-shadow:   0 1px 0 rgba(61,242,224,0.08);
+  --nav-bg: rgba(11, 15, 20, 0.92);
+  --nav-shadow: 0 1px 0 rgba(61, 242, 224, 0.08);
 
-  --shadow-card:  0 4px 32px rgba(0,0,0,0.5);
-  --shadow-glow:  0 0 24px rgba(61,242,224,0.18);
+  --shadow-card: 0 4px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 24px rgba(61, 242, 224, 0.18);
 
   --logo-filter: none;
 
-  --nav-gradient-top: rgba(61, 242, 224, 0);  /* Cyan del acento, sutil pero visible */
-  --nav-gradient-mid: rgba(61, 242, 224, 0);  /* Se desvanece al medio               */
-  
-  --nav-acrylic-bg: rgba(11, 15, 20, 0.55);   /* Oscuro semi-transparente sin color */
+  /*Gradiente Navegacion*/
+  --nav-gradient-top: rgba(
+    61,
+    242,
+    224,
+    0
+  ); /* Cyan del acento, sutil pero visible */
+  --nav-gradient-mid: rgba(
+    61,
+    242,
+    224,
+    0
+  ); /* Se desvanece al medio               */
+
+  --nav-acrylic-bg: rgba(
+    11,
+    15,
+    20,
+    0.55
+  ); /* Oscuro semi-transparente sin color */
 }
 
 /* — Modo claro —
@@ -66,47 +81,62 @@
    Fondo: #f5f5f5, Acento teal: #2a9d8f, Gris texto: #606060 */
 [data-theme="light"] {
   /* Colores base */
-  --bg-primary:   #ffffff;
+  --bg-primary: #ffffff;
   --bg-secondary: #ffffff;
-  --bg-card:      #ffffff;
-  --bg-card-hover:#eef9f7;
+  --bg-card: #ffffff;
+  --bg-card-hover: #eef9f7;
 
   /* Acento principal (teal del logo light) */
-  --accent:       #0B9283;
-  --accent-dim:   #2a9d8f20;
+  --accent: #0b9283;
+  --accent-dim: #2a9d8f20;
   --accent-hover: #228b7e;
 
   /* Texto */
-  --text-primary:   #1a1a2e;
-  --text-secondary: #6F6F6F;
-  --text-muted:     #9ca3af;
+  --text-primary: #1a1a2e;
+  --text-secondary: #6f6f6f;
+  --text-muted: #9ca3af;
 
   /* Bordes */
-  --border:       #e2e8f0;
-  --border-accent:#2a9d8f40;
+  --border: #e2e8f0;
+  --border-accent: #2a9d8f40;
 
   /* Navbar */
-  --nav-bg:       rgba(244,246,248,0.95);
-  --nav-shadow:   0 1px 0 rgba(42,157,143,0.15);
+  --nav-bg: rgba(244, 246, 248, 0.95);
+  --nav-shadow: 0 1px 0 rgba(42, 157, 143, 0.15);
 
   /* Sombras */
-  --shadow-card:  0 4px 24px rgba(0,0,0,0.08);
-  --shadow-glow:  0 0 24px rgba(42,157,143,0.15);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 24px rgba(42, 157, 143, 0.15);
 
   /* Logo a mostrar */
   --logo-filter: none;
 
-  --nav-gradient-top: rgba(11, 146, 131, 0.40);  /* Teal del acento, sutil pero visible */
-  --nav-gradient-mid: rgba(11, 146, 131, 0.12);  /* Se desvanece al medio               */
-  
-  --nav-acrylic-bg: rgba(255, 255, 255, 0.55); /* Blanco semi-transparente sin color */
+  --nav-gradient-top: rgba(
+    11,
+    146,
+    131,
+    0.4
+  ); /* Teal del acento, sutil pero visible */
+  --nav-gradient-mid: rgba(
+    11,
+    146,
+    131,
+    0.12
+  ); /* Se desvanece al medio               */
+
+  --nav-acrylic-bg: rgba(
+    255,
+    255,
+    255,
+    0.55
+  ); /* Blanco semi-transparente sin color */
 }
 
 /* — Tokens de layout —
    Espaciados, radios y tipografía (invariantes por tema) */
 :root {
-  --font-display: 'Syne', sans-serif;
-  --font-body:    'DM Sans', sans-serif;
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -114,16 +144,15 @@
   --radius-xl: 32px;
 
   --section-padding: clamp(80px, 10vw, 140px);
-  --container-max:   1200px;
-  --container-pad:   clamp(16px, 5vw, 60px);
+  --container-max: 1200px;
+  --container-pad: clamp(16px, 5vw, 60px);
 
   --nav-h: 100px;
 
-  --transition-fast:   0.18s ease;
+  --transition-fast: 0.18s ease;
   --transition-normal: 0.32s ease;
-  --transition-slow:   0.6s ease;
+  --transition-slow: 0.6s ease;
 }
-
 
 /* ================================================================
    2. RESET & BASE
@@ -149,12 +178,15 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.65;
-  transition: background-color var(--transition-normal),
-              color var(--transition-normal);
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal);
   overflow-x: hidden;
 }
 
-img, video, svg {
+img,
+video,
+svg {
   max-width: 100%;
   display: block;
 }
@@ -175,7 +207,9 @@ button {
   font-family: var(--font-body);
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: var(--font-body);
 }
 
@@ -185,15 +219,24 @@ input, textarea, select {
   border-radius: var(--radius-sm);
 }
 
-body    { top: 0 !important; }
-#navbar { z-index: 99999 !important; }
+body {
+  top: 0 !important;
+}
+#navbar {
+  z-index: 99999 !important;
+}
 
 /* ================================================================
    3. TIPOGRAFÍA GLOBAL
    Escala tipográfica coherente. Usa variables de tema para color.
 ================================================================ */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   line-height: 1.15;
   font-weight: 700;
@@ -208,7 +251,6 @@ p {
   /* Texto destacado en color acento del tema activo */
   color: var(--accent);
 }
-
 
 /* ================================================================
    4. UTILIDADES COMPARTIDAS
@@ -270,9 +312,10 @@ p {
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.03em;
-  transition: transform var(--transition-fast),
-              box-shadow var(--transition-fast),
-              background-color var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
   position: relative;
   overflow: hidden;
 }
@@ -314,14 +357,15 @@ p {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
 }
 
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /* ================================================================
    5. MÓDULO: ROBOT GUIDE
@@ -345,7 +389,10 @@ p {
   gap: 8px;
   opacity: 0;
   transform: translateX(30px);
-  transition: opacity 0.5s ease, transform 0.5s ease, bottom 0.3s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    bottom 0.3s ease;
 }
 
 #robot-guide.is-visible {
@@ -357,16 +404,16 @@ p {
 .robot-img-wrap {
   width: 180px;
   height: 200px;
-  overflow: hidden;       /* Recorta el canvas vacío del PNG       */
+  overflow: hidden; /* Recorta el canvas vacío del PNG       */
   position: relative;
 }
 
 /* Imagen oversized posicionada para mostrar solo el brazo */
 .robot-img {
-  width: 80%;            /* Imagen mucho más ancha que el wrapper  */
+  width: 80%; /* Imagen mucho más ancha que el wrapper  */
   position: absolute;
-  bottom: 10%;           /* Ajustar si el brazo sube/baja          */
-  left: 8%;              /* Ajustar si el brazo se mueve izquierda */
+  bottom: 10%; /* Ajustar si el brazo sube/baja          */
+  left: 8%; /* Ajustar si el brazo se mueve izquierda */
   filter: drop-shadow(0 0 10px var(--accent));
   transition: filter var(--transition-normal);
   animation: robot-idle 3s ease-in-out infinite;
@@ -382,7 +429,9 @@ p {
   color: var(--text-secondary);
   opacity: 0;
   transform: translateY(6px) scale(0.9);
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
   pointer-events: none;
   text-align: center;
   box-shadow: var(--shadow-card);
@@ -395,7 +444,6 @@ p {
   transform: translateY(0) scale(1);
 }
 
-
 /* — Brazo robótico grande en el Hero — */
 .hero-robot {
   position: absolute;
@@ -404,7 +452,7 @@ p {
   /* Dimensiones del contenedor recortador */
   width: clamp(615px, 40vw, 615px);
   height: clamp(615px, 30vw, 615px);
-  overflow: hidden;       /* Recorta el canvas vacío del PNG        */
+  overflow: hidden; /* Recorta el canvas vacío del PNG        */
   pointer-events: none;
   z-index: 1;
   animation: hero-robot-enter 1s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
@@ -412,12 +460,14 @@ p {
 
 /* Imagen oversized dentro del hero */
 .hero-robot-img {
-  width: 80%;            /* Escala la imagen para llenar el área   */
+  width: 80%; /* Escala la imagen para llenar el área   */
   position: absolute;
-  bottom: 15%;           /* Ajusta si el brazo sube/baja           */
-  left: 8%;              /* Ajusta si el brazo se mueve izquierda  */
+  bottom: 15%; /* Ajusta si el brazo sube/baja           */
+  left: 8%; /* Ajusta si el brazo se mueve izquierda  */
   filter: drop-shadow(0 0 28px var(--accent));
-  transition: filter var(--transition-normal), opacity 0.5s ease;
+  transition:
+    filter var(--transition-normal),
+    opacity 0.5s ease;
   animation: hero-robot-float 4s ease-in-out infinite;
 }
 
@@ -434,8 +484,13 @@ p {
 }
 
 @media (max-width: 480px) {
-  #robot-guide { display: none; }
-  .hero-robot  { width: 200px; height: 150px; }
+  #robot-guide {
+    display: none;
+  }
+  .hero-robot {
+    width: 200px;
+    height: 150px;
+  }
 }
 
 /* ================================================================
@@ -446,34 +501,46 @@ p {
 
 #navbar {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: var(--nav-h);
   z-index: 99999;
   background: linear-gradient(
     to bottom,
-    var(--nav-gradient-top)  0%,
+    var(--nav-gradient-top) 0%,
     var(--nav-gradient-mid) 50%,
-    transparent             100%
+    transparent 100%
   );
   box-shadow: none !important;
-  border:     none !important;
-  overflow:   visible;
+  border: none !important;
+  overflow: visible;
   transition: background 0.6s ease;
 }
 
 /* Capa acrílica separada para que el blur se desvanezca sin línea */
 #navbar::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: -20px;
-  z-index: 0;          /* CAMBIO CLAVE: era -1, ahora 0              */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  z-index: 0; /* CAMBIO CLAVE: era -1, ahora 0              */
   pointer-events: none;
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   background: transparent;
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 100%);
-  mask-image:         linear-gradient(to bottom, black 0%, black 40%, transparent 100%);
-  transition: backdrop-filter 0.6s ease, background 0.6s ease;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 40%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 100%);
+  transition:
+    backdrop-filter 0.6s ease,
+    background 0.6s ease;
 }
 
 #navbar.scrolled {
@@ -489,7 +556,7 @@ p {
 /* El contenido siempre por encima de la capa acrílica */
 .nav-inner {
   position: relative;
-  z-index: 2;          /* CAMBIO CLAVE: sube todo el contenido sobre ::before */
+  z-index: 2; /* CAMBIO CLAVE: sube todo el contenido sobre ::before */
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--container-pad);
@@ -509,7 +576,9 @@ p {
   transition: opacity var(--transition-fast);
 }
 
-.nav-logo:hover { opacity: 0.85; }
+.nav-logo:hover {
+  opacity: 0.85;
+}
 
 .logo-img {
   height: 280px;
@@ -540,12 +609,12 @@ p {
   transition: color var(--transition-fast);
   position: relative;
   display: inline-block;
-  white-space: nowrap;   /* Evita que el texto se parta en dos líneas */
+  white-space: nowrap; /* Evita que el texto se parta en dos líneas */
 }
 
 /* Subrayado animado */
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 12px;
@@ -558,10 +627,16 @@ p {
   transition: transform 0.22s ease;
 }
 
-.nav-link:hover         { color: var(--text-primary); }
-.nav-link.active        { color: var(--accent); }
+.nav-link:hover {
+  color: var(--text-primary);
+}
+.nav-link.active {
+  color: var(--accent);
+}
 .nav-link:hover::after,
-.nav-link.active::after { transform: scaleX(1); }
+.nav-link.active::after {
+  transform: scaleX(1);
+}
 
 /* Hamburger mobile */
 .hamburger {
@@ -579,12 +654,20 @@ p {
   height: 2px;
   background: var(--text-primary);
   border-radius: 2px;
-  transition: transform var(--transition-fast), opacity var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
 }
 
-.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 
 /* Toggle tema */
 .theme-toggle {
@@ -594,7 +677,9 @@ p {
   transition: transform var(--transition-fast);
 }
 
-.theme-toggle:hover { transform: scale(1.05); }
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
 
 .toggle-track {
   display: flex;
@@ -606,7 +691,10 @@ p {
   padding: 4px 8px;
 }
 
-.toggle-icon  { font-size: 0.85rem; line-height: 1; }
+.toggle-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
 
 .toggle-thumb {
   width: 14px;
@@ -629,7 +717,9 @@ p {
   transition: transform var(--transition-fast);
 }
 
-.lang-toggle:hover { transform: scale(1.05); }
+.lang-toggle:hover {
+  transform: scale(1.05);
+}
 
 .lang-option {
   display: inline-flex;
@@ -644,21 +734,33 @@ p {
   padding: 0 2px;
 }
 
-.lang-option.active       { color: var(--accent); }
-.lang-separator           { font-size: 0.7rem; color: var(--border); }
+.lang-option.active {
+  color: var(--accent);
+}
+.lang-separator {
+  font-size: 0.7rem;
+  color: var(--border);
+}
 
 .lang-flag-icon {
   width: 28px;
   height: 20px;
   border-radius: 3px;
   display: block;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.35);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
   opacity: 0.45;
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
 }
 
-.lang-option.active .lang-flag-icon { opacity: 1; transform: scale(1.12); }
-.lang-toggle:hover .lang-flag-icon  { opacity: 0.85; }
+.lang-option.active .lang-flag-icon {
+  opacity: 1;
+  transform: scale(1.12);
+}
+.lang-toggle:hover .lang-flag-icon {
+  opacity: 0.85;
+}
 
 .lang-label {
   font-family: var(--font-display);
@@ -669,7 +771,9 @@ p {
   transition: color var(--transition-fast);
 }
 
-.lang-option.active .lang-label { color: var(--accent); }
+.lang-option.active .lang-label {
+  color: var(--accent);
+}
 
 /* ================================================================
    7. MÓDULO: SECCIÓN HERO / PRESENTACIÓN
@@ -767,7 +871,6 @@ p {
   animation: scroll-bounce 1.6s ease-in-out infinite;
 }
 
-
 /* ================================================================
    8. MÓDULO: SECCIÓN QUIÉNES SOMOS
    Descripción de la empresa y stats animados.
@@ -831,9 +934,10 @@ p {
   border-radius: var(--radius-lg);
   padding: 28px 24px;
   text-align: center;
-  transition: border-color var(--transition-fast),
-              box-shadow var(--transition-fast),
-              transform var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .stat-card:hover {
@@ -862,7 +966,6 @@ p {
   margin-top: 6px;
 }
 
-
 /* ================================================================
    9. MÓDULO: SECCIÓN PROYECTOS
    Grid de tarjetas con slideshow de imágenes automático.
@@ -884,9 +987,10 @@ p {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: border-color var(--transition-fast),
-              box-shadow var(--transition-fast),
-              transform var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
   display: flex;
   flex-direction: column;
 }
@@ -908,8 +1012,9 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-slow),
-              opacity var(--transition-fast);
+  transition:
+    transform var(--transition-slow),
+    opacity var(--transition-fast);
 }
 
 .project-card:hover .project-img {
@@ -920,7 +1025,7 @@ p {
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -974,15 +1079,15 @@ p {
   border-radius: 50%;
   background: var(--border);
   cursor: pointer;
-  transition: background var(--transition-fast),
-              transform var(--transition-fast);
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .project-dot.active {
   background: var(--accent);
   transform: scale(1.3);
 }
-
 
 /* ================================================================
    10. MÓDULO: SECCIÓN NOVEDADES
@@ -1007,9 +1112,10 @@ p {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: border-color var(--transition-fast),
-              box-shadow var(--transition-fast),
-              transform var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
   display: flex;
   flex-direction: column;
 }
@@ -1103,7 +1209,6 @@ p {
   letter-spacing: 0.03em;
 }
 
-
 /* ================================================================
    11. MÓDULO: SECCIÓN FUNDADORES
    Tarjetas del equipo fundador con foto, rol y bio.
@@ -1130,9 +1235,10 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  transition: border-color var(--transition-fast),
-              box-shadow var(--transition-fast),
-              transform var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .founder-card:hover {
@@ -1218,9 +1324,10 @@ p {
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--text-secondary);
-  transition: color var(--transition-fast),
-              border-color var(--transition-fast),
-              background var(--transition-fast);
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background var(--transition-fast);
 }
 
 .founder-social:hover {
@@ -1228,7 +1335,6 @@ p {
   border-color: var(--accent);
   background: var(--accent-dim);
 }
-
 
 /* ================================================================
    12. MÓDULO: SECCIÓN CONTACTO
@@ -1335,8 +1441,9 @@ a.contact-value:hover {
   padding: 12px 16px;
   color: var(--text-primary);
   font-size: 0.95rem;
-  transition: border-color var(--transition-fast),
-              box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
   resize: vertical;
 }
 
@@ -1359,7 +1466,9 @@ a.contact-value:hover {
 }
 
 /* Botón de envío con estado loading */
-.btn-text { transition: opacity var(--transition-fast); }
+.btn-text {
+  transition: opacity var(--transition-fast);
+}
 .btn-loader {
   display: none;
   width: 16px;
@@ -1370,8 +1479,12 @@ a.contact-value:hover {
   animation: spin 0.7s linear infinite;
 }
 
-.btn.loading .btn-text  { opacity: 0; }
-.btn.loading .btn-loader { display: block; }
+.btn.loading .btn-text {
+  opacity: 0;
+}
+.btn.loading .btn-loader {
+  display: block;
+}
 
 /* Mensaje de éxito */
 .form-success {
@@ -1383,7 +1496,6 @@ a.contact-value:hover {
   font-size: 0.92rem;
   text-align: center;
 }
-
 
 /* ================================================================
    13. MÓDULO: FOOTER
@@ -1456,7 +1568,6 @@ a.contact-value:hover {
   color: var(--text-muted);
 }
 
-
 /* ================================================================
    14. ANIMACIONES & KEYFRAMES
    Todas las animaciones centralizadas en este bloque.
@@ -1464,47 +1575,84 @@ a.contact-value:hover {
 
 /* Balanceo idle del robot */
 @keyframes robot-idle {
-  0%   { transform: rotate(-3deg); }
-  50%  { transform: rotate(3deg) translateY(-4px); }
-  100% { transform: rotate(-3deg); }
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg) translateY(-4px);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
 }
 
 /* Animación de saludo del robot al cambiar sección */
 @keyframes robot-wave-anim {
-  0%   { transform: rotate(0deg); }
-  25%  { transform: rotate(-15deg) scale(1.1); }
-  50%  { transform: rotate(10deg) scale(1.05); }
-  75%  { transform: rotate(-8deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* Pulsación del fondo hero */
 @keyframes bg-pulse {
-  0%   { opacity: 0.4; }
-  100% { opacity: 0.8; }
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }
 
 /* Flotación del circuito decorativo hero */
 @keyframes float-circuit {
-  0%   { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(-16px) rotate(1.5deg); }
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-16px) rotate(1.5deg);
+  }
 }
 
 /* Rebote del indicador scroll */
 @keyframes scroll-bounce {
-  0%, 100% { transform: translateY(0); opacity: 1; }
-  50%       { transform: translateY(10px); opacity: 0.3; }
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.3;
+  }
 }
 
 /* Animación de trazo del circuito */
 @keyframes dash-draw {
-  from { stroke-dashoffset: 1000; }
-  to   { stroke-dashoffset: 0; }
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 /* Spinner del botón */
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Animación del path del circuito en hero */
@@ -1513,7 +1661,6 @@ a.contact-value:hover {
   stroke-dashoffset: 1000;
   animation: dash-draw 3s ease forwards;
 }
-
 
 /* ================================================================
    15. MEDIA QUERIES (RESPONSIVE)
@@ -1527,8 +1674,12 @@ a.contact-value:hover {
     text-align: center;
   }
 
-  .hero-text { align-items: center; }
-  .hero-subtitle { margin: 0 auto; }
+  .hero-text {
+    align-items: center;
+  }
+  .hero-subtitle {
+    margin: 0 auto;
+  }
 
   .hero-circuit {
     display: none; /* Ocultar decorativo en tablet */
@@ -1550,7 +1701,9 @@ a.contact-value:hover {
 /* — Tablets (< 768px) — */
 @media (max-width: 768px) {
   /* Navbar mobile */
-  .hamburger { display: flex; }
+  .hamburger {
+    display: flex;
+  }
 
   .nav-links {
     position: fixed;
@@ -1578,7 +1731,9 @@ a.contact-value:hover {
     font-size: 1rem;
   }
 
-  .theme-toggle { margin-left: 0; }
+  .theme-toggle {
+    margin-left: 0;
+  }
 
   /* Grids adaptados a mobile */
   .about-stats {
@@ -1624,5 +1779,7 @@ a.contact-value:hover {
     align-items: stretch;
   }
 
-  .btn { text-align: center; }
+  .btn {
+    text-align: center;
+  }
 }
