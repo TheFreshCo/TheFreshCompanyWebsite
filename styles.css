@@ -55,8 +55,8 @@
 
   --logo-filter: none;
 
-  --nav-gradient-top: rgba(61, 242, 224, 0.45);  /* Cyan del acento, sutil pero visible */
-  --nav-gradient-mid: rgba(61, 242, 224, 0.15);  /* Se desvanece al medio               */
+  --nav-gradient-top: rgba(61, 242, 224, 0);  /* Cyan del acento, sutil pero visible */
+  --nav-gradient-mid: rgba(61, 242, 224, 0);  /* Se desvanece al medio               */
   
   --nav-acrylic-bg: rgba(11, 15, 20, 0.55);   /* Oscuro semi-transparente sin color */
 }
