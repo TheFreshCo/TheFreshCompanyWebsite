@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Fresh Company</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       MÓDULO: ROBOT GUIDE (Brazo robótico guía de navegación)
+       Descripción: SVG animado del brazo robótico del logo que
+       sigue al usuario mientras navega. Cambia de color según
+       el tema activo (oscuro/claro).
+  ============================================================ -->
+<div id="robot-guide" aria-hidden="true">
+  <div class="robot-img-wrap">
+    <img id="robot-img"
+         src="Solo_brazo_dark_sin_fondo.png"
+         alt="Brazo robótico guía"
+         class="robot-img" />
+  </div>
+  <div id="robot-bubble" class="robot-bubble">
+    <span id="robot-message">¡Hola! Soy tu guía.</span>
+  </div>
+</div>
+
+
+  <!-- ============================================================
+       MÓDULO: NAVBAR (Barra de navegación principal)
+       Descripción: Fija en la parte superior. Contiene logo,
+       links de sección y el toggle de tema claro/oscuro.
+  ============================================================ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a href="#presentacion" class="nav-logo">
+        <img id="nav-logo-img"
+             src="Logo_freshCompany_05_white.png"
+             alt="The Fresh Company Logo"
+             class="logo-img" />
+      </a>
+      <!-- Hamburger (mobile) -->
+      <button id="hamburger" class="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <!-- Links de navegación -->
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#presentacion"  class="nav-link">Inicio</a></li>
+        <li><a href="#quienes-somos" class="nav-link">Quienes somos</a></li>
+        <li><a href="#proyectos"     class="nav-link">Proyectos</a></li>
+        <li><a href="#novedades"     class="nav-link">Novedades</a></li>
+        <li><a href="#fundadores"    class="nav-link">Fundadores</a></li>
+        <li><a href="#contacto"      class="nav-link">Contacto</a></li>
+      </ul>
+      <!-- Toggle tema -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <span class="toggle-track">
+          <span class="toggle-icon">🌙</span>
+          <span class="toggle-thumb"></span>
+          <span class="toggle-icon">☀️</span>
+        </span>
+      </button>
+      <button id="lang-toggle" class="lang-toggle" aria-label="Cambiar idioma">
+        <span class="lang-option active" id="lang-es">
+          <span class="fi fi-es lang-flag-icon"></span>
+          <span class="lang-label">ES</span>
+        </span>
+        <span class="lang-separator">|</span>
+        <span class="lang-option" id="lang-en">
+          <span class="fi fi-us lang-flag-icon"></span>
+          <span class="lang-label">EN</span>
+        </span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       MÓDULO: SECCIÓN PRESENTACIÓN (Hero)
+       Descripción: Primera sección visible. Frase principal,
+       tagline y CTA. Fondo con efecto de partículas/gradiente.
+  ============================================================ -->
+  <section id="presentacion" class="section section--hero">
+    <div class="hero-bg-effect" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <div class="hero-text reveal">
+        <span class="hero-badge">Innovación · Tecnología · Resultado</span>
+        <h1 class="hero-title">
+          Construimos el<br/>
+          <span class="accent">futuro digital</span><br/>
+          de tu empresa.
+        </h1>
+        <p class="hero-subtitle">
+          Soluciones tecnológicas a medida que transforman ideas en
+          productos reales, escalables y memorables.
+        </p>
+        <div class="hero-cta">
+          <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+          <a href="#contacto"  class="btn btn--ghost">Hablar con nosotros</a>
+        </div>
+      </div>
+      <!-- Decorativo: línea de circuito -->
+      <div class="hero-circuit" aria-hidden="true">
+        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+          <path class="circuit-path" d="M20,150 Q80,50 160,150 T300,100 T380,150" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.4"/>
+          <circle cx="20"  cy="150" r="4" fill="var(--accent)" opacity="0.6"/>
+          <circle cx="160" cy="150" r="4" fill="var(--accent)" opacity="0.6"/>
+          <circle cx="300" cy="100" r="4" fill="var(--accent)" opacity="0.6"/>
+          <circle cx="380" cy="150" r="4" fill="var(--accent)" opacity="0.6"/>
+          <line x1="300" y1="100" x2="300" y2="40" stroke="var(--accent)" stroke-width="1" opacity="0.3"/>
+          <circle cx="300" cy="40" r="6" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+
+    <div id="hero-robot" class="hero-robot" aria-hidden="true">
+      <img id="hero-robot-img"
+          src="Solo_brazo_dark_sin_fondo.png"
+          alt=""
+          class="hero-robot-img" />
+    </div>
+
+    <!-- Indicador scroll -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="scroll-dot"></span>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       MÓDULO: SECCIÓN QUIÉNES SOMOS
+       Descripción: Descripción de la empresa, valores y misión.
+       Layout de dos columnas con stats animados.
+  ============================================================ -->
+  <section id="quienes-somos" class="section section--about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Quiénes somos</span>
+        <h2 class="section-title">Más que una empresa,<br/><span class="accent">un ecosistema de ideas.</span></h2>
+      </div>
+      <div class="about-grid">
+        <!-- Columna texto -->
+        <div class="about-text reveal">
+          <p>
+            The Fresh Company nace de la convicción de que la tecnología debe ser
+            accesible, eficiente y, sobre todo, transformadora. Somos un equipo
+            multidisciplinario que combina estrategia, diseño e ingeniería para
+            crear productos que realmente importan.
+          </p>
+          <p>
+            Trabajamos con startups y empresas en crecimiento, adaptando nuestras
+            soluciones a cada etapa del negocio, desde el concepto hasta el escalado.
+          </p>
+          <ul class="about-values">
+            <li><span class="value-icon">⚡</span> Velocidad sin sacrificar calidad</li>
+            <li><span class="value-icon">🔬</span> Metodología basada en datos</li>
+            <li><span class="value-icon">🤝</span> Colaboración real y transparente</li>
+          </ul>
+        </div>
+        <!-- Columna stats -->
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Proyectos entregados</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="4">0</span><span class="stat-suffix"></span>
+            <p class="stat-label">Años de experiencia</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+            <p class="stat-label">Clientes satisfechos</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="12">0</span><span class="stat-suffix"></span>
+            <p class="stat-label">Países alcanzados</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       MÓDULO: SECCIÓN PROYECTOS
+       Descripción: Carrusel de tarjetas de proyectos. Cada
+       tarjeta cambia su imagen automáticamente (slideshow).
+       Permite navegar entre proyectos con flechas o dots.
+  ============================================================ -->
+  <section id="proyectos" class="section section--projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portafolio</span>
+        <h2 class="section-title">Proyectos que <span class="accent">hablan por sí solos.</span></h2>
+      </div>
+      <!-- Grid de tarjetas -->
+      <div class="projects-grid reveal">
+
+        <!-- Tarjeta proyecto 1 -->
+        <article class="project-card" data-images='["https://picsum.photos/seed/proj1a/600/400","https://picsum.photos/seed/proj1b/600/400","https://picsum.photos/seed/proj1c/600/400"]'>
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://picsum.photos/seed/proj1a/600/400" alt="Proyecto Alpha" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn--primary btn--sm">Ver más</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web App</span>
+            <h3 class="project-title">Proyecto Alpha</h3>
+            <p class="project-desc">Plataforma SaaS de gestión para equipos remotos con dashboards en tiempo real.</p>
+          </div>
+          <!-- Indicadores de imagen -->
+          <div class="project-dots"></div>
+        </article>
+
+        <!-- Tarjeta proyecto 2 -->
+        <article class="project-card" data-images='["https://picsum.photos/seed/proj2a/600/400","https://picsum.photos/seed/proj2b/600/400","https://picsum.photos/seed/proj2c/600/400"]'>
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://picsum.photos/seed/proj2a/600/400" alt="Proyecto Beta" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn--primary btn--sm">Ver más</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Mobile</span>
+            <h3 class="project-title">Proyecto Beta</h3>
+            <p class="project-desc">App móvil de logística que redujo tiempos de entrega en un 40%.</p>
+          </div>
+          <div class="project-dots"></div>
+        </article>
+
+        <!-- Tarjeta proyecto 3 -->
+        <article class="project-card" data-images='["https://picsum.photos/seed/proj3a/600/400","https://picsum.photos/seed/proj3b/600/400","https://picsum.photos/seed/proj3c/600/400"]'>
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://picsum.photos/seed/proj3a/600/400" alt="Proyecto Gamma" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn--primary btn--sm">Ver más</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Automatización</span>
+            <h3 class="project-title">Proyecto Gamma</h3>
+            <p class="project-desc">Sistema de automatización industrial integrado con IoT y análisis predictivo.</p>
+          </div>
+          <div class="project-dots"></div>
+        </article>
+
+        <!-- Tarjeta proyecto 4 -->
+        <article class="project-card" data-images='["https://picsum.photos/seed/proj4a/600/400","https://picsum.photos/seed/proj4b/600/400"]'>
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://picsum.photos/seed/proj4a/600/400" alt="Proyecto Delta" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn--primary btn--sm">Ver más</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">E-Commerce</span>
+            <h3 class="project-title">Proyecto Delta</h3>
+            <p class="project-desc">Tienda online con IA de recomendación que incrementó conversiones en 60%.</p>
+          </div>
+          <div class="project-dots"></div>
+        </article>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       MÓDULO: SECCIÓN NOVEDADES
+       Descripción: Últimas noticias, artículos o actualizaciones
+       de la empresa en formato de tarjetas de blog.
+  ============================================================ -->
+  <section id="novedades" class="section section--news">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Blog & Noticias</span>
+        <h2 class="section-title">Lo último de <span class="accent">The Fresh Company.</span></h2>
+      </div>
+      <div class="news-grid reveal">
+
+        <article class="news-card news-card--featured">
+          <div class="news-img-wrap">
+            <img src="https://picsum.photos/seed/news1/800/500" alt="Noticia destacada" class="news-img"/>
+            <span class="news-badge">Destacado</span>
+          </div>
+          <div class="news-content">
+            <span class="news-date">Febrero 2025</span>
+            <h3 class="news-title">Lanzamos nuestra nueva suite de herramientas de automatización</h3>
+            <p class="news-excerpt">Un conjunto de herramientas diseñadas para que pequeñas y medianas empresas automaticen sus procesos sin necesidad de infraestructura compleja.</p>
+            <a href="#" class="news-link">Leer más →</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="https://picsum.photos/seed/news2/600/400" alt="Noticia 2" class="news-img"/>
+          </div>
+          <div class="news-content">
+            <span class="news-date">Enero 2025</span>
+            <h3 class="news-title">Alianza estratégica con líderes del sector fintech</h3>
+            <p class="news-excerpt">Expandimos nuestro portafolio hacia soluciones financieras digitales de próxima generación.</p>
+            <a href="#" class="news-link">Leer más →</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-img-wrap">
+            <img src="https://picsum.photos/seed/news3/600/400" alt="Noticia 3" class="news-img"/>
+          </div>
+          <div class="news-content">
+            <span class="news-date">Diciembre 2024</span>
+            <h3 class="news-title">Reconocidos como startup del año en la región</h3>
+            <p class="news-excerpt">Nuestro crecimiento y compromiso con la innovación fueron reconocidos a nivel regional.</p>
+            <a href="#" class="news-link">Leer más →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       MÓDULO: SECCIÓN FUNDADORES
+       Descripción: Presentación del equipo fundador con fotos,
+       nombres, roles y links a redes sociales.
+  ============================================================ -->
+  <section id="fundadores" class="section section--founders">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">El Equipo</span>
+        <h2 class="section-title">Las mentes detrás de <span class="accent">la frescura.</span></h2>
+      </div>
+      <div class="founders-grid reveal">
+
+        <!-- Fundador J -->
+        <div class="founder-card">
+          <div class="founder-avatar-wrap">
+            <img src="https://picsum.photos/seed/founderJ/300/300" alt="Fundador J" class="founder-avatar"/>
+            <span class="founder-initial">J</span>
+          </div>
+          <h3 class="founder-name">Nombre Apellido</h3>
+          <p class="founder-role">CEO & Co-Fundador</p>
+          <p class="founder-bio">Visionario tecnológico con más de 10 años construyendo productos digitales de impacto global.</p>
+          <div class="founder-links">
+            <a href="#" class="founder-social" aria-label="LinkedIn">in</a>
+            <a href="#" class="founder-social" aria-label="Twitter">X</a>
+          </div>
+        </div>
+
+        <!-- Fundador C -->
+        <div class="founder-card">
+          <div class="founder-avatar-wrap">
+            <img src="https://picsum.photos/seed/founderC/300/300" alt="Fundador C" class="founder-avatar"/>
+            <span class="founder-initial">C</span>
+          </div>
+          <h3 class="founder-name">Nombre Apellido</h3>
+          <p class="founder-role">CTO & Co-Fundador</p>
+          <p class="founder-bio">Ingeniero de sistemas apasionado por la arquitectura de software escalable y la inteligencia artificial.</p>
+          <div class="founder-links">
+            <a href="#" class="founder-social" aria-label="LinkedIn">in</a>
+            <a href="#" class="founder-social" aria-label="GitHub">GH</a>
+          </div>
+        </div>
+
+        <!-- Fundador E -->
+        <div class="founder-card">
+          <div class="founder-avatar-wrap">
+            <img src="https://picsum.photos/seed/founderE/300/300" alt="Fundador E" class="founder-avatar"/>
+            <span class="founder-initial">E</span>
+          </div>
+          <h3 class="founder-name">Nombre Apellido</h3>
+          <p class="founder-role">COO & Co-Fundadora</p>
+          <p class="founder-bio">Experta en operaciones y estrategia empresarial, asegura que cada proyecto llegue al destino correcto.</p>
+          <div class="founder-links">
+            <a href="#" class="founder-social" aria-label="LinkedIn">in</a>
+            <a href="#" class="founder-social" aria-label="Twitter">X</a>
+          </div>
+        </div>
+
+        <!-- Fundador M -->
+        <div class="founder-card">
+          <div class="founder-avatar-wrap">
+            <img src="https://picsum.photos/seed/founderM/300/300" alt="Fundador M" class="founder-avatar"/>
+            <span class="founder-initial">M</span>
+          </div>
+          <h3 class="founder-name">Nombre Apellido</h3>
+          <p class="founder-role">CMO & Co-Fundador</p>
+          <p class="founder-bio">Creativo y estratega de marca que convierte la visión de la empresa en historias que conectan.</p>
+          <div class="founder-links">
+            <a href="#" class="founder-social" aria-label="LinkedIn">in</a>
+            <a href="#" class="founder-social" aria-label="Instagram">IG</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       MÓDULO: SECCIÓN CONTACTO
+       Descripción: Formulario de contacto con validación y
+       mapa o info de ubicación/redes sociales.
+  ============================================================ -->
+  <section id="contacto" class="section section--contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Contacto</span>
+        <h2 class="section-title">Hablemos sobre tu <span class="accent">próximo proyecto.</span></h2>
+      </div>
+      <div class="contact-grid reveal">
+        <!-- Info de contacto -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <p class="contact-label">Email</p>
+              <a href="mailto:hola@thefreshcompany.com" class="contact-value">hola@thefreshcompany.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <p class="contact-label">Ubicación</p>
+              <p class="contact-value">Latinoamérica · España · Global</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💬</span>
+            <div>
+              <p class="contact-label">Redes sociales</p>
+              <div class="contact-social-links">
+                <a href="#" class="social-btn">LinkedIn</a>
+                <a href="#" class="social-btn">Instagram</a>
+                <a href="#" class="social-btn">Twitter/X</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Formulario -->
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="cf-name">Nombre completo</label>
+            <input type="text" id="cf-name" name="name" placeholder="Tu nombre" autocomplete="name" required />
+            <span class="form-error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Correo electrónico</label>
+            <input type="email" id="cf-email" name="email" placeholder="tu@email.com" autocomplete="email" required />
+            <span class="form-error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Asunto</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="¿En qué podemos ayudarte?" required />
+            <span class="form-error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Mensaje</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+            <span class="form-error" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            <span class="btn-text">Enviar mensaje</span>
+            <span class="btn-loader" aria-hidden="true"></span>
+          </button>
+          <!-- Mensaje de confirmación -->
+          <div id="form-success" class="form-success" aria-live="polite" role="status" hidden>
+            ✅ ¡Mensaje enviado! Nos pondremos en contacto pronto.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       MÓDULO: PIE DE PÁGINA (Footer)
+       Descripción: Información final, logo, links legales,
+       créditos y copyright.
+  ============================================================ -->
+  <footer id="footer" class="footer">
+    <div class="container footer-inner">
+      <!-- Columna logo y tagline -->
+      <div class="footer-brand">
+        <img id="footer-logo-img"
+             src="Logo_freshCompany_05_white.png"
+             alt="The Fresh Company"
+             class="footer-logo" />
+        <p class="footer-tagline">Construimos el futuro digital,<br/>un proyecto a la vez.</p>
+      </div>
+      <!-- Columna links rápidos -->
+      <div class="footer-links-col">
+        <h4 class="footer-col-title">Navegación</h4>
+        <ul class="footer-list">
+          <li><a href="#presentacion">Inicio</a></li>
+          <li><a href="#quienes-somos">Nosotros</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#novedades">Novedades</a></li>
+        </ul>
+      </div>
+      <!-- Columna legal -->
+      <div class="footer-links-col">
+        <h4 class="footer-col-title">Legal</h4>
+        <ul class="footer-list">
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Términos de uso</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+      <!-- Columna contacto rápido -->
+      <div class="footer-links-col">
+        <h4 class="footer-col-title">Contacto</h4>
+        <ul class="footer-list">
+          <li><a href="mailto:hola@thefreshcompany.com">hola@thefreshcompany.com</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="footer-year"></span> The Fresh Company · JCEM. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
